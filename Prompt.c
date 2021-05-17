@@ -45,7 +45,7 @@ int main(int argc, char *argv[]) {
 		straux=input;
 		memcpy(tmp, input, strlen(input));
 		memset(input, 0x00, sizeof(char)*strlen(tmp));
-		while(*(tmp+index)&&*(tmp+index)!=' ')
+		while(*(tmp+index)&&(*(tmp+index)!=' '&&*(tmp+index)!='\n'))
 		{
 			*straux=*(tmp+index);
 			straux++;
